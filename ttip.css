@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+.plugin-ttip-container	{
+	position: absolute;
+	display: block;
+	background-color: #282828;
+	color: white;
+	border-radius: 3px;
+	border: 0px #282828;
+	padding: 6px;
+	font-size: 9pt;
+	z-index: 1000;
+	min-width: 10px;
+	word-wrap: break-word;
+}
+
+.ttip-transition					{
+	transition: top 0.2s, left 0.2s;
+}
+.top:after,
+.right:after,
+.bottom:after,
+.left:after		{
+	content: "";
+	position: absolute;
+	z-index: 1001;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	line-height: 0px;
+}
+.top:after	{
+	border-width: 4px 3.3px 0 3.3px;
+	border-color: transparent;
+	border-top-color: inherit;
+}
+
+.right:after	{
+	border-width: 6.6px 7px 6.6px 0;
+	border-width: 3.3px 4px 3.3px 0;
+	border-color: transparent;
+	border-right-color: inherit;
+}
+
+.bottom:after	{
+	border-width: 0 3.3px 4px 3.3px;
+	border-color: transparent;
+	border-bottom-color: inherit;
+}
+
+.left:after	{
+	border-width: 3.3px 0 3.3px 4px;
+	border-color: transparent;
+	border-left-color: inherit;
+}
+
+.top-left-left:after,
+.top-right-left:after			{
+	bottom: -4px;
+	right: 11px;
+}
+.top-left-right:after,
+.top-right-right:after		{
+	bottom: -4px;
+	left: 11px;
+}
+.right-top-top:after,
+.right-bottom-top:after	{
+	bottom: 11px;
+	left: -4px;
+}
+.right-top-bottom:after,
+.right-bottom-bottom:after	{
+	top: 11px;
+	left: -4px;
+}
+
+.bottom-left-left:after,
+.bottom-right-left:after	{
+	top: -4px;
+	right: 11px;
+}
+.bottom-left-right:after,
+.bottom-right-right:after {
+	top: -4px;
+	left: 11px;
+}
+
+.left-top-top:after,
+.left-bottom-top:after		{
+	bottom: 11px;
+	right: -4px;
+}
+.left-top-bottom:after,
+.left-bottom-bottom:after	{
+	top: 11px;
+	right: -4px;
+}
